@@ -26,14 +26,14 @@ def procesamiento_train(df, train=False):
         USD_to_COP(df)
 
         # Eliminamos outliers de precios
-        # df = delete_outliers(df)
+        df = delete_outliers(df)
 
         # Rellenamos los precios nulos con la media
         fill_prices(df)
 
         # Eliminamos outliers de lat y lon 
         df = df.loc[~(df.lat > 30)]
-        df = df.loc[~(df.lat < -20)] 
+        #df = df.loc[~(df.lat < -20)]       # no hace falta si se elimina outliers
     
     else:
         df.drop(['currency'], axis='columns', inplace=True)
