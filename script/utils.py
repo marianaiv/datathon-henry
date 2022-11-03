@@ -116,7 +116,10 @@ def get_number_bathrooms(df):
     df.loc[df.description.isnull(), 'description'] = 'No description'
     
     # Cambiamos los numeros escritos por numeros
-    dict_num = {' uno ': ' 1 ', ' dos ':' 2 ', ' tres ':' 3 ', ' cuatro ':' 4 ', ' cinco ':' 5 ', ' seis ':' 6 ', ' siete ':' 7 ', ' ocho ':' 8 ', ' nueve ':' 9 '}
+    dict_num = {' uno ': ' 1 ', ' dos ':' 2 ', ' tres ':' 3 ', 
+                ' cuatro ':' 4 ', ' cinco ':' 5 ', ' seis ':' 6 ', 
+                ' siete ':' 7 ', ' ocho ':' 8 ', ' nueve ':' 9 '}
+                
     for old, new in dict_num.items():
         df.description = df.description.str.replace(old, new, regex=False)
 
