@@ -7,7 +7,7 @@ import numpy as np
 
 def drop_columns(df):
     '''
-    Elimina id y Unnamed:0 y columnas con un solo valor único. 
+    Elimina columnas que no se utilizaron y columnas con un solo valor único. 
     '''
 
     S = df.nunique()
@@ -127,8 +127,6 @@ def get_number_bathrooms(df):
     df = df.join(bathrooms)
     # donde hay nulos, sustituimos por el numero de baños hallado en description
     df.loc[(df.bathrooms.isnull()) & (df[0].notnull()), 'bathrooms'] = df[0]
-    # revisamos que se hayan sustituido
-    df.loc[(df.bathrooms.isnull()) & (df[0].notnull()), 'bathrooms']
     
     # Dropeo la columna agregada para la sustitución
     df.drop([0], axis='columns',inplace=True)

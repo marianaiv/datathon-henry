@@ -5,7 +5,6 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # **Tabla de Contenidos:**
-
 - [**Tabla de Contenidos:**](#tabla-de-contenidos)
 - [El datathon <a name="datathon"></a>](#el-datathon-)
 - [Sobre el repositorio <a name="about_repo"></a>](#sobre-el-repositorio-)
