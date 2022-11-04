@@ -145,6 +145,30 @@ def get_number_bathrooms(df):
 
     return df
 
+def add_crime(df):
+    '''
+    Agrega una columna por el crimen por cada 100mil habitantes en 2020
+    según el segundo nivel administrativo l2.
+    '''
+    
+    crime = {
+        'Cundinamarca': 2068, 'Antioquia': 2328, 'Caldas': 1914,
+        'Atlántico': 1743, 'Valle del Cauca': 2334, 'Risaralda': 1938,
+        'Cauca': 1850, 'Nariño': 1683, 'Meta': 2733,
+        'Norte de Santander': 1959, 'Quindío': 2362, 'Santander': 2408,
+        'Bolívar': 1825, 'Magdalena': 1363, 'Tolima': 2567,
+        'Huila': 2206, 'Boyacá': 1984, 'Chocó': 1236,
+        'Córdoba': 921, 'Cesar': 1599, 'Caquetá': 1986,
+        'Guainía': 1615, 'Casanare': 2080, 'Sucre': 1298,
+        'Guaviare': 2551, 'La Guajira': 985, 'Amazonas': 1802,
+        'San Andrés Providencia y Santa Catalina': 3015, 
+        'Putumayo': 2163, 'Vichada': 1022, 'Arauca': 1724
+        }
+    
+    df['crime'] = df['l2'].map(crime)
+
+    return None
+
 def property_type_dummies(df):
     '''
     Agrega columna de dummies de tipos de propiedad
