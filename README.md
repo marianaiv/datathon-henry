@@ -1,17 +1,16 @@
-<h1 align="center"> Datathon :rocket: </h1>
+<h1 align="center"> Datathon - Bootcamp Henry:rocket: </h1>
 
-> Repositorio para el datathon del bootcamp Soy Henry.  
+> Repositorio para el datathon del bootcamp [Henry](https://www.soyhenry.com).  
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # **Tabla de Contenidos:**
-- [**Tabla de Contenidos:**](#tabla-de-contenidos)
 - [El datathon <a name="datathon"></a>](#el-datathon-)
 - [Sobre el repositorio <a name="about_repo"></a>](#sobre-el-repositorio-)
 - [Notebook <a name="notebook"></a>](#notebook-)
 - [Pipeline <a name="pipeline"></a>](#pipeline-)
   - [Instrucciones de uso](#instrucciones-de-uso)
-
+- [License](#license)
 
 # El datathon <a name="datathon"></a>
 El datathon es parte de la etapa de proyectos individuales del bootcamp Soy Henry. En este caso, se trató un problema de clasificación relacionado al mercado inmobiliario. El objetivo fue desarrollar un modelo de aprendizaje automático capaz de clasificar si una propiedad era barata o cara, tomando como frontera de división entre estas dos categorías la media de precios.
@@ -22,6 +21,8 @@ Para el datathon nos proporcionaron los datos que se encuentran disponibles en e
 En el repositorio se encuentra el notebook `modelos.ipynb`, donde se realizó el EDA, se entrenaron modelos para medir su rendimiento y se obtuvieron las predicciones.
 
 En la carpeta *datasets* se encuentra el zip con los datos. Este debe ser descomprimido en la misma carpeta para que el notebook corra.
+
+En la carpeta *script* se encuentra el `run.py`, un archivo con el pipeline para el mejor modelo obtenido. Los outputs de los diferentes modelos se encuentran en la carpeta *logs*, donde el mejor modelo fue el correspondiente al archivo `marianaiv(3)-outliers.csv`.
 
 # Notebook <a name="notebook"></a>
 El notebook esta organizado de la siguiente manera:
@@ -92,3 +93,7 @@ optional arguments:
   --train TRAIN  Nombre del archivo de train [Default: properties_colombia_train.csv]
   --test TEST    Nombre del archivo de test [Default: properties_colombia_test.csv]
 ```
+
+# Licencia <a name="license"></a>
+
+El uso de este trabajo está licenciado bajo [GNU General Public License v3.0 (GNU GPLv3)](https://choosealicense.com/licenses/gpl-3.0/).
